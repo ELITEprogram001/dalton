@@ -1,0 +1,27 @@
+.skill-tile {
+    max-width: 300px;
+    min-height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+}
+
+.skill-tile > div {
+    padding-left: .75rem;
+    font-weight: bold;
+}
+
+.skill-img {
+    height: 40px;
+    width: 40px;
+}
+
+#skill-container {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    column-gap: 20px;
+    row-gap: 30px;
+}

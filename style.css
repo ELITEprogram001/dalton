@@ -1,10 +1,10 @@
 :root {
-    font-size: 16px;
+    font-size: 18px;
     font-family: "Lato", sans-serif;
     color: #bbb;
     --main-fg-color: #d90429;
-    --main-bg-dark-color: #272d2d;
-    --main-bg-light-color: #b8d5b8;
+    --main-bg-dark-color: #0D0221;
+    --main-bg-light-color: #241734;
     /*272d2d-b8d5b8-9792e3-d90429-c3f73a*/
 }
 
@@ -12,6 +12,11 @@ body {
     width: 100%;
     height: 100%;
     background-color: var(--main-bg-dark-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 h1 {
@@ -19,8 +24,200 @@ h1 {
     font-family: "Montserrat", sans-serif;
 }
 
+h2 {
+    color: #FF6C11;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
 #profile-pic {
     border-radius: 50%;
     height: 100px;
     width: 100px;
+}
+
+#education {
+    background-color: #ddd;
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        "title title"
+        "degree courses";
+    place-items: center;
+}
+
+#education-title {
+    grid-area: title;
+    justify-self: start;
+}
+
+#skills {
+    background-color: #023788;
+}
+
+.about {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+}
+
+.resume-section {
+    width: 100%;
+    padding: 1.5rem 20rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.resume-title {
+    align-self: flex-start;
+    margin-bottom: .75rem;
+}
+
+nav {
+    width: 100%;
+    height: 3rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lato", sans-serif;
+    letter-spacing: .2rem;
+    position: fixed;
+    top: 0;
+}
+
+nav > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+
+nav li {
+    display: inline-block;
+    color: black;
+    text-transform: uppercase;
+    padding: 0rem .75rem;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+nav li:hover {
+    font-weight: 800;
+}
+
+nav h1 {
+    color: black;
+    text-transform: uppercase;
+    margin-right: 6rem;
+    letter-spacing: .1rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+}
+
+.selected {
+    font-weight: 800;
+}
+
+.about-section {
+    width: 50%;
+    padding-left: 20rem;
+    padding-right: 5rem;
+}
+
+#about-img {
+    background: url("https://preview.redd.it/ikwx4ppjgc881.jpg?auto=webp&s=3a80bc947aa425c66709b949e655659cd9c82b65");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+#college-details {
+    grid-area: degree;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+    border: 2px solid #777;
+    border-radius: 16px;
+    padding: 10px;
+    background-color: #ccc;
+    max-height: 100px;
+}
+
+#college-details > img {
+    width: 60px;
+}
+
+div#college-details-text > p {
+    margin: 0;
+    padding: 0;
+}
+
+#about-title {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0;
+}
+
+#contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        "title title"
+        "links map";
+    place-items: center;
+}
+
+#contact-title {
+    grid-area: title;
+    justify-self: start;
+}
+
+#contact-links {
+    grid-area: links;
+}
+
+#link-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#link-list li {
+    display: flex;
+    align-items: center;
+}
+
+li > img {
+    width: 25px;
+    padding: .5rem 1rem;
+    filter: invert(1)
+}
+
+.contact-link {
+    color: #FF6C11;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: #ffc39e;
+}
+
+footer {
+    width: 100%;
+    border-top: 1px solid #aaa;
+    display: flex;
+    justify-content: right;
 }

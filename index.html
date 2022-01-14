@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/skill-tile.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,27 +15,34 @@
 </head>
 <body>
     <nav>
+        <h1 id="nav-name">Dalton Ridgeway</h1>
         <ul>
-            <li>Home</li>
-            <li>AssignMe</li>
-            <li>Smaller Projects</li>
+            <li class="selected"><a class="nav-link" href="/index.html">Home</a></li>
+            <li><a class="nav-link" href="/assignme.html">AssignMe</a></li>
+            <li ><a class="nav-link" href="/smallerprojects.html">Smaller Projects</a></li>
         </ul>
     </nav>
-    <img id="profile-pic" src="./img/snow_profile_1.jpg" alt="Dalton's profile picture.">
-    <h1>DALTON RIDGEWAY</h1>
-    <div class="resume-section">
-        <h2 class="resume-title">About</h2>
-        <p>I’m a recent computer science graduate from an accredited university. Clear and concise communicator focused on group understanding and efficient problem solving. Looking for a career to pursue continued learning in my field.</p>
+    <div class="about">
+        <div id="about-text" class="about-section">
+            <h2 id="about-title" class="resume-title">About</h2>
+            <p>I’m a recent computer science graduate from an accredited university. Clear and concise communicator focused on group understanding and efficient problem solving. Looking for a career to pursue continued learning in my field.</p>
+        </div>
+        <div id="about-img" class="about-section">
+        </div>
     </div>
-    <div class="resume-section">
-        <h2 class="resume-title">Education</h2>
-        <p><strong>B.S. Computer Science</strong> 
-            University of Houston - Clear Lake
-            Houston, TX
-            Awarded 2021
-        </p>
+    <div id="education" class="resume-section">
+        <h2 id="education-title" class="resume-title">Education</h2>
+        <div id="college-details">
+            <img src="img/uhcl.png" alt="UHCL logo.">
+            <div id="college-details-text">
+                <p><strong>B.S. Computer Science</strong></p>
+                <p>University of Houston - Clear Lake</p>
+                <p>Houston, TX</p>
+                <p>Awarded 2021</p>
+            </div>
+        </div>
         <div id="coursework">
-            <p><strong>Relevant Coursework:</strong></p>
+            <p><strong>Relevant Coursework Includes:</strong></p>
             <ul>
                 <li>Data Structures and Algorithms</li>
                 <li>Database Design</li>
@@ -43,24 +52,50 @@
             </ul> 
         </div>
     </div>
-    <div class="resume-section">
+    <div id="skills" class="resume-section">
         <h2 class="resume-title">Skills</h2>
-        <ul>
-            <li>HTML/CSS</li>
-            <li>JavaScript</li>
-            <li>Java</li>
-            <li>C#</li>
-            <li>Swift</li>
-            <li>MySQL</li>
-        </ul>
+        <div id="skill-container">
+            <div class="skill-tile">
+                <img class="skill-img" src="img/html-5.png" alt="HTML:5 icon.">
+                <div>HTML/CSS</div>
+            </div>
+            <div class="skill-tile">
+                <img class="skill-img" src="img/js-file.png" alt="JavaScript icon.">
+                <div>JavaScript</div>
+            </div>
+            <div class="skill-tile">
+                <img class="skill-img" src="img/java.png" alt="Java icon.">
+                <div>Java</div>
+            </div>
+            <div class="skill-tile">
+                <img class="skill-img" src="img/c-sharp.png" alt="C-Sharp icon.">
+                <div>C#</div></div>
+            <div class="skill-tile">
+                <img class="skill-img" src="img/swift.png" alt="Swift icon.">
+                <div>Swift</div>
+            </div>
+            <div class="skill-tile">
+                <img class="skill-img" src="img/recovery.png" alt="Database icon.">
+                <div>MySQL</div>
+            </div>
+        </div>
     </div>
-    <div class="resume-section">
-        <h2 class="resume-title">Contact Info</h2>
-        <ul>
-            <li><a href="mailto:ridgeway.jared@gmail.com">ridgeway.jared@gmail.com</a></li>
-            <li><a href="tel:+5122964582"></a>512-296-4582</li>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3470.3016592898057!2d-95.35954898457776!3d29.565825047977267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640937356294a61%3A0x930b79ef81ecd7de!2s8907%20Sungate%20Dr%2C%20Pearland%2C%20TX%2077584!5e0!3m2!1sen!2sus!4v1641832509713!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </ul>
+    <div id="contact" class="resume-section">
+        <h2 id="contact-title" class="resume-title">Contact Info</h2>
+        <div id="contact-links">
+            <ul id="link-list">
+                <li><img src="img/email(1).png" alt="email icon"><a class="contact-link" href="mailto:ridgeway.jared@gmail.com">ridgeway.jared@gmail.com</a></li>
+                <li><img src="img/phone-call.png" alt="phone icon"><a class="contact-link" href="tel:+5122964582">512-296-4582</a></li>
+                <li><img src="img/github.png" alt="github icon"><a class="contact-link" href="https://github.com/ELITEprogram001">GitHub Profile</a></li>
+                <li><img src="img/linkedin-logo.png" alt="linkedin icon"><a class="contact-link" href="https://www.linkedin.com/in/dalton-ridgeway/">LinkedIn Profile</a></li>
+            </ul>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3470.3016592898057!2d-95.35954898457776!3d29.565825047977267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640937356294a61%3A0x930b79ef81ecd7de!2s8907%20Sungate%20Dr%2C%20Pearland%2C%20TX%2077584!5e0!3m2!1sen!2sus!4v1641832509713!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
+    <footer>
+        <ul>
+            <li><a href="attributions.html">Attributions</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
